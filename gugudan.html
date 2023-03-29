@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>구구단 게임</title>
+    <script>
+        let correct = 0; // 정답 횟수
+        let incorrect = 0; // 틀린 횟수
+
+        for (let i = 1; i <= 10; i++) { // 10번 반복
+            const num1 = Math.floor(Math.random() * 9) + 1; // 1~9 중 랜덤 수
+            const num2 = Math.floor(Math.random() * 9) + 1; // ""
+            const answer = num1 * num2; // 정답
+            const input = prompt(`${num1} X ${num2} = ??`); // 문제 출력과 답 입력
+        if (input === null) { // 취소 버튼을 누르면 종료
+            break;
+    }
+        if (Number(input) === answer) { // 정답 처리
+            alert('정답!');
+            correct++;
+        } else { // 오답 처리
+        alert(`틀렸습니다! 정답은 ${answer}입니다.`);
+        incorrect++;
+    }
+}
+    alert(`게임 종료!.\n정답 횟수: ${correct}\n틀린 횟수: ${incorrect}`); //게임 종료
+</script>
+</head>
+<body>
+    
+</body>
+</html>
